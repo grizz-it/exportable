@@ -14,5 +14,5 @@ interface ExportableComponentInterface
      *
      * @return mixed
      */
-    public function export();
+    public function export(): mixed;
 }

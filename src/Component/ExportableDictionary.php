@@ -17,14 +17,14 @@ class ExportableDictionary implements ExportableComponentInterface
      *
      * @var ExportableComponentInterface[]
      */
-    private $items = [];
+    private array $items = [];
 
     /**
      * Whether or not the type of the input should be restricted.
      *
      * @var string|null
      */
-    private $restrict;
+    private ?string $restrict;
 
     /**
      * Constructor.
@@ -129,7 +129,7 @@ class ExportableDictionary implements ExportableComponentInterface
      *
      * @return mixed
      */
-    public function export()
+    public function export(): mixed
     {
         $export = [];
         foreach ($this->items as $key => $item) {

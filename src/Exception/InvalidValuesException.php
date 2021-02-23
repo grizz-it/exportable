@@ -16,7 +16,7 @@ class InvalidValuesException extends Exception
      *
      * @param mixed $values
      */
-    public function __construct($values)
+    public function __construct(mixed $values)
     {
         parent::__construct(
             'Could not validate values before export:' . print_r($values, true)

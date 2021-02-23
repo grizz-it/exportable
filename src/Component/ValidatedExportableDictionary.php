@@ -19,7 +19,7 @@ class ValidatedExportableDictionary extends ArrayIterator implements ExportableC
      *
      * @var ValidatorInterface|null
      */
-    private $validator;
+    private ?ValidatorInterface $validator;
 
     /**
      * Constructor.
@@ -40,7 +40,7 @@ class ValidatedExportableDictionary extends ArrayIterator implements ExportableC
      *
      * @return mixed
      */
-    public function export()
+    public function export(): mixed
     {
         $values = $this->exportChildren($this->getArrayCopy());
         if (
@@ -60,7 +60,7 @@ class ValidatedExportableDictionary extends ArrayIterator implements ExportableC
      *
      * @return mixed
      */
-    private function exportChildren($values)
+    private function exportChildren(mixed $values): mixed
     {
         if (is_array($values)) {
             foreach ($values as $key => $value) {
